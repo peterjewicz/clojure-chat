@@ -1,36 +1,27 @@
-# immutant-websockets
+# Clojure Chat
 
-FIXME: Write a one-line description of your library/project.
+A simple chat application with Clojure using websockets
 
-## Overview
-
-FIXME: Write a paragraph about the library/project and highlight its goals.
 
 ## Setup
 
-To get an interactive development environment run:
+To run UI
 
     lein figwheel
 
 and open your browser at [localhost:3449](http://localhost:3449/).
 This will auto compile and send all changes to the browser without the
 need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+get a Browser Connected REPL.
 
-    (js/alert "Am I connected?")
+To start the server run a repl from server/core and run
 
-and you should see an alert in the browser window.
+    (-main)
 
-To clean all compiled files:
+This should start up a websocket server on the provided port
 
-    lein clean
+The server can be run from any REPL afterwards run ````(-main)```` which will start it up.
 
-To create a production build run:
-
-    lein do clean, cljsbuild once min
-
-And open your browser in `resources/public/index.html`. You will not
-get live reloading, nor a REPL. 
 
 ## License
 
